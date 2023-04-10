@@ -4,6 +4,7 @@ import ME from '../../assets/me-about.png'
 import {FaAward} from 'react-icons/fa'
 import {FiUsers} from 'react-icons/fi'
 import {VscFolderLibrary} from 'react-icons/vsc'
+import AWS from '../../assets/aws-certified-cloud-practitioner.png'
 
 const About = () => {
   return (
@@ -23,11 +24,15 @@ const About = () => {
           <div className="about__cards">
             <article className='about__card'>
               <FaAward className='about__icon'/>
-              <h5>Experience</h5>
-              <small>10+ Years Working</small>
+
+              <a href="https://www.credly.com/badges/6697f2c7-91f5-4df3-b6db-c75e792eaa18/public_url">
+              <img src={AWS} alt="About" />
+</a>
+              
+              {/* <small>10+ Years Working</small> */}
             </article>
 
-            <article className='about__card'>
+            <article className='about__card' >
               <FiUsers className='about__icon'/>
               <h5>Clients</h5>
               <small>20+ Worldwide</small>
