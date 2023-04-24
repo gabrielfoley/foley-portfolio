@@ -8,6 +8,7 @@ import IMG5 from '../../assets/portfolio5.png'
 import IMG6 from '../../assets/portfolio6.png'
 import IMG7 from '../../assets/portfolio7.png'
 import IMG8 from '../../assets/portfolio8.png'
+import {BsPatchCheckFill} from 'react-icons/bs'
 
 // DO NOT USE THE IMAGES IN PRODUCTION
 
@@ -15,24 +16,50 @@ const data = [
   {
     id: 1,
     image: IMG1,
-    title: 'Non-Profit Website:  KrsnaFood.org ',
+    title: 'www.KrsnaFood.org ',
     github: 'https://github.com',
     demo: 'https://dribbble.com/shots/16673715-Crypto-currency-dashboards-and-financial-data-visualization',
-    checks:'check marks and info'
+    check1: <BsPatchCheckFill/>,
+    infoAWS: 'AWS EC2',
+    infoNGINX:'NGINX Reverse Proxy',
+    infoELB:'ELB',
+    infoReact: 'React',
+    infoStripe: 'Stripe',
+    infoYouTube: 'YouTube API',
+    infoEmailJS: 'EmailJS',
+    infoDocker:'Docker'
+
   },
   {
     id: 2,
     image: IMG2,
     title: 'E-Commerce - MERN Stack App',
     github: 'https://github.com',
-    demo: 'https://dribbble.com/shots/16580766-Orion-UI-kit-Charts-templates-infographics-in-Figma'
+    demo: 'https://dribbble.com/shots/16580766-Orion-UI-kit-Charts-templates-infographics-in-Figma',
+    check2: <BsPatchCheckFill/>,
+    infoAWS: 'AWS EC2',
+    infoNGINX:'NGINX Reverse Proxy',
+    infoELB:'ELB',
+    infoReact: 'React',
+    infoStripe: 'Stripe',
+    infoDocker:'Docker',
+    infoExpressJS: 'ExpressJS',
+
+
   },
   {
     id: 3,
     image: IMG3,
     title: 'Vishnu Match-Card Game',
-    github: 'https://github.com',
-    demo: 'https://dribbble.com/shots/17290917-Eclipse-Figma-dashboard-UI-kit-for-data-design-web-apps'
+    github: 'https://github.com/gabrielfoley/magic-game',
+    demo: 'http://magicgame.foley.systems',
+    check3: <BsPatchCheckFill/>,
+    infoAWS: 'AWS EC2',
+    infoNGINX:'NGINX Reverse Proxy',
+    infoELB:'ELB',
+    infoReact: 'React',
+    infoCSS: 'CSS',
+    infoDocker: 'Docker',
   },
   {
     id: 4,
@@ -44,30 +71,30 @@ const data = [
   {
     id: 8,
     image: IMG8,
-    title: 'Charts templates & infographics in Figma',
-    github: 'https://github.com',
-    demo: 'https://dribbble.com/shots/16541289-Orion-UI-kit-Charts-templates-infographics-in-Figma'
+    title: 'Single Real Estate Website',
+    github: 'https://github.com/gabrielfoley/land',
+    demo: 'http://buildtoday.link/'
   },
   {
     id: 6,
     image: IMG6,
-    title: 'Charts templates & infographics in Figma',
+    title: '45th Festival of The Chariots Website',
     github: 'https://github.com',
-    demo: 'https://dribbble.com/shots/15887665-Orion-UI-kit-Charts-templates-infographics-in-Figma'
+    demo: 'http://sfkrishna2011.foley.systems/'
   },
   {
     id: 7,
     image: IMG7,
-    title: 'Charts templates & infographics in Figma',
+    title: '45th Festival of The Chariots Website',
     github: 'https://github.com',
-    demo: 'https://dribbble.com/shots/15887665-Orion-UI-kit-Charts-templates-infographics-in-Figma'
+    demo: 'http://sfkrishna.foley.systems'
   },
   {
     id: 5,
     image: IMG5,
-    title: 'Charts templates & infographics in Figma',
+    title: 'Lord Chaitanya Festival Website',
     github: 'https://github.com',
-    demo: 'https://dribbble.com/shots/15887665-Orion-UI-kit-Charts-templates-infographics-in-Figma'
+    demo: 'http://chaitanyafestival.foley.systems/'
   }
 ]
 
@@ -80,14 +107,76 @@ const Portfolio = () => {
 
       <div className="container portfolio__container">
         {
-          data.map(({id, image, title, github, demo, checks}) => {
+          data.map(({
+            id, 
+            image, 
+            title, 
+            github, 
+            demo, 
+            check1,
+            check2,
+            check3,
+            check4,
+            check5,
+            check6, 
+            infoAWS, 
+            infoReact,
+            infoCSS, 
+            infoStripe, 
+            infoEmailJS, 
+            infoYouTube, 
+            infoNGINX, 
+            infoELB, 
+            infoDocker, 
+            infoExpressJS}) => {
             return (
               <article key={id} className='portfolio__item'>
               <div className="portfolio__item-image">
                 <img src={image} alt={title} />
               </div>
-              <h3>{title}</h3>
-              <h3>{checks}</h3>
+              
+              <h3 className='title'>{title}</h3>
+              
+              <div className='checkInfo'>
+              <h5>{check1}{check2}{check3}{check4}{check5}{check6}  
+              <span className='spanRight'>{infoAWS} </span>
+              <span className='spanLeft'>
+                {check1}{check2}{check3}{check4}{check5}{check6}
+              </span>  
+              <span className='spanRight'>{infoELB}  </span>
+              <span className='spanLeft'>
+                {check1}{check2}{check3}{check4}{check5}{check6}
+                </span>    
+                <span className='spanRight'>{infoDocker}</span>
+              </h5>
+
+              <h5>{check1}{check2}{check3}{check4}{check5}{check6} 
+              
+              <span className='spanRight'>{infoNGINX}</span>
+              </h5>
+            
+          
+              <div className='div'>
+              <h5>{check1}{check2}{check3}{check4}{check5}{check6}  
+              <span className='spanRight'>{infoReact}</span>
+              <span className='spanLeft'>
+                {check1}{check3}{check4}{check5}{check6} 
+                </span>   
+                <span className='spanRight'>{infoCSS}{infoEmailJS}</span>
+                <span className='spanLeft'>
+                  {check1}{check2}{check3}{check4}{check5}{check6} 
+                  </span>
+                  <span className='spanRight'>{infoExpressJS}</span></h5>
+
+              <h5>{check1}{check2}{check3}{check4}{check5}{check6}  
+              <span className='spanRight'>{infoStripe} </span>
+              <span className='spanLeft'>{check1}
+              </span> 
+              <span className='spanRight'>{infoYouTube}</span>
+              </h5>
+              </div>
+            
+              </div>
               <div className="portfolio__item-cta">
                 <a href={github} className='btn' target='_blank' rel="noreferrer">Github</a>
                 <a href={demo} className='btn btn-primary' target='_blank' rel="noreferrer">Live Demo</a>
