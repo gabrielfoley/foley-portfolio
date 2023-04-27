@@ -9,6 +9,7 @@ import IMG6 from '../../assets/portfolio6.png'
 import IMG7 from '../../assets/portfolio7.png'
 import IMG8 from '../../assets/portfolio8.png'
 import {BsPatchCheckFill} from 'react-icons/bs'
+import { inherits } from 'babel-core/lib/util'
 
 // DO NOT USE THE IMAGES IN PRODUCTION
 
@@ -20,6 +21,7 @@ const data = [
     github: 'https://github.com',
     demo: 'https://dribbble.com/shots/16673715-Crypto-currency-dashboards-and-financial-data-visualization',
     check1: <BsPatchCheckFill/>,
+    check_1: <BsPatchCheckFill/>,
     infoAWS: 'AWS EC2',
     infoNGINX:'NGINX Reverse Proxy',
     infoELB:'ELB',
@@ -27,16 +29,20 @@ const data = [
     infoStripe: 'Stripe',
     infoYouTube: 'YouTube API',
     infoEmailJS: 'EmailJS',
-    infoDocker:'Docker'
+    infoDocker:'Docker',
+    infoMaterialUI: 'Material UI',
+    infoBootstrap: "Bootstrap",
+    infoCSS1: 'CSS',
 
   },
   {
     id: 2,
     image: IMG2,
-    title: 'E-Commerce - MERN Stack App',
+    title: 'MERN Stack App',
     github: 'https://github.com',
     demo: 'https://dribbble.com/shots/16580766-Orion-UI-kit-Charts-templates-infographics-in-Figma',
     check2: <BsPatchCheckFill/>,
+    check_2: <BsPatchCheckFill/>,
     infoAWS: 'AWS EC2',
     infoNGINX:'NGINX Reverse Proxy',
     infoELB:'ELB',
@@ -44,13 +50,19 @@ const data = [
     infoStripe: 'Stripe',
     infoDocker:'Docker',
     infoExpressJS: 'ExpressJS',
+    infoCSS2:'CSS',
+    infoMongoDB:'MongoDB',
+    infoMongoose:'Mongoose',
+    infoRedux: 'Redux',
+    infoNodeJS: 'NodeJS',
+    infoJWT:'JWT',
 
 
   },
   {
     id: 3,
     image: IMG3,
-    title: 'Vishnu Match-Card Game',
+    title: 'Vishnu Match-Game',
     github: 'https://github.com/gabrielfoley/magic-game',
     demo: 'http://magicgame.foley.systems',
     check3: <BsPatchCheckFill/>,
@@ -58,22 +70,22 @@ const data = [
     infoNGINX:'NGINX Reverse Proxy',
     infoELB:'ELB',
     infoReact: 'React',
-    infoCSS: 'CSS',
+    infoCSS3: 'CSS',
     infoDocker: 'Docker',
-  },
-  {
-    id: 4,
-    image: IMG4,
-    title: 'Queen of Hearts Life Coaching: shyamadasi.com',
-    github: 'https://github.com',
-    demo: 'https://www.shyamadasi.com/'
   },
   {
     id: 8,
     image: IMG8,
-    title: 'Single Real Estate Website',
-    github: 'https://github.com/gabrielfoley/land',
+    title: 'www.BuildToday.link',
+    github: 'https://github.com',
     demo: 'http://buildtoday.link/'
+  },
+  {
+    id: 4,
+    image: IMG4,
+    title: 'www.ShyamaDasi.com',
+    github: 'https://github.com/gabrielfoley/land',
+    demo: 'https://www.shyamadasi.com/'
   },
   {
     id: 6,
@@ -114,21 +126,33 @@ const Portfolio = () => {
             github, 
             demo, 
             check1,
+            check_1,
             check2,
+            check_2,
             check3,
             check4,
             check5,
             check6, 
             infoAWS, 
             infoReact,
-            infoCSS, 
+            infoCSS1,
+            infoCSS2,
+            infoCSS3, 
             infoStripe, 
             infoEmailJS, 
             infoYouTube, 
             infoNGINX, 
             infoELB, 
             infoDocker, 
-            infoExpressJS}) => {
+            infoExpressJS,
+            infoMaterialUI,
+            infoBootstrap,
+            infoMongoDB,
+            infoMongoose,
+            infoRedux,
+            infoNodeJS,
+            infoJWT,
+          }) => {
             return (
               <article key={id} className='portfolio__item'>
               <div className="portfolio__item-image">
@@ -138,41 +162,153 @@ const Portfolio = () => {
               <h3 className='title'>{title}</h3>
               
               <div className='checkInfo'>
-              <h5>{check1}{check2}{check3}{check4}{check5}{check6}  
+              <h5>
+              {/* ////////////// */}
+                {check1}{check2}{check3}{check4}{check5}{check6}
+              {/* ////////////// */}  
+
+              {/* ////// AWS ///// */}
               <span className='spanRight'>{infoAWS} </span>
+               {/* /////////////// */}
+
+              {/* ///////////// */}
               <span className='spanLeft'>
                 {check1}{check2}{check3}{check4}{check5}{check6}
               </span>  
+              {/* ////////////// */} 
+
+              {/* ///// ELB ///// */}
               <span className='spanRight'>{infoELB}  </span>
+              {/* /////////////// */}
+
+              {/* ///////////// */}
               <span className='spanLeft'>
                 {check1}{check2}{check3}{check4}{check5}{check6}
-                </span>    
+                </span>
+              {/* ////////////// */} 
+
+              {/* /// DOCKER ///  */}
                 <span className='spanRight'>{infoDocker}</span>
+              {/* /////////////// */}
               </h5>
 
+              {/* ////////////// */}
               <h5>{check1}{check2}{check3}{check4}{check5}{check6} 
-              
+              {/* ////////////// */}
+
+              {/* /// NGINX /// */}
               <span className='spanRight'>{infoNGINX}</span>
+              {/* ///////////// */}
               </h5>
             
           
               <div className='div'>
-              <h5>{check1}{check2}{check3}{check4}{check5}{check6}  
-              <span className='spanRight'>{infoReact}</span>
-              <span className='spanLeft'>
-                {check1}{check3}{check4}{check5}{check6} 
-                </span>   
-                <span className='spanRight'>{infoCSS}{infoEmailJS}</span>
-                <span className='spanLeft'>
-                  {check1}{check2}{check3}{check4}{check5}{check6} 
-                  </span>
-                  <span className='spanRight'>{infoExpressJS}</span></h5>
 
+              {/* //////////// */}
               <h5>{check1}{check2}{check3}{check4}{check5}{check6}  
+              {/* /////////////// */}
+
+              {/* //REACT// */}
+              <span className='spanRight'>{infoReact}</span>
+              {/* ////////// */}
+
+
+              {/* //////////////// */}
+              <span className='spanLeft'>
+                {check1}{check2}{check4}{check5}{check6} 
+                </span>   
+              {/* //////////////// */}
+
+              {/* //  CSS1  // */}
+              <span className='spanRight'>{infoCSS1}</span>
+              {/* ////////////////// */}
+
+              {/* //////////////// */}
+              <span className='spanLeft'>
+                {check_1} 
+                </span>   
+              {/* //////////////// */}
+
+              {/* //CSS , EMAILJS // */}
+                <span className='spanRight'>{infoCSS2}{infoEmailJS}</span>
+              {/* ////////////////// */}
+
+              {/* //////////////// */}
+              <span className='spanLeft'>
+                {check_2} 
+                </span>   
+              {/* //////////////// */}
+              
+
+              {/* ////////////////// */}
+                <span className='spanLeft'>
+              {check3}{check4}{check5}{check6} 
+                  </span>
+              {/* ////////////////// */}
+
+              {/* //EXPRESS-JS// */}
+                  <span className='spanRight'>{infoCSS3}{infoExpressJS}</span></h5>
+              {/* ////////////// */}
+
+              {/* ////////////// */}
+              <h5>{check1}{check2}{check4}{check5}{check6} 
+              {/* ////////////// */}
+
+              {/* ////STRIPE//// */}
               <span className='spanRight'>{infoStripe} </span>
-              <span className='spanLeft'>{check1}
+              {/* ////////////// */}
+
+              {/* ////////////// */}
+              <span className='spanLeft'>{check1}{check2}
               </span> 
-              <span className='spanRight'>{infoYouTube}</span>
+              {/* ////////////// */}
+
+              {/* //YOUTUBE-API// */}
+              <span className='spanRight'>{infoYouTube}{infoMongoDB}</span>
+              {/* ////////////// */}
+
+              <span  >{<br/>}</span>
+
+              {/* ////////////// */}
+              <span>{check1}{check2}
+              </span> 
+              
+              {/* ////////////// */}
+
+              {/* //MATERIAL-UI// */}
+              <span className='spanLeft' >{infoMaterialUI}{infoMongoose}</span>
+              {/* ////////////// */}
+
+              {/* ////////////// */}
+              <span className='spanLeft'>{check1}{check2}
+              </span> 
+              {/* ////////////// */}
+
+              {/* //BOOTSTRAP// */}
+              <span className='spanRight'>{infoBootstrap}{infoRedux}</span>
+               {/* ////////////// */}
+
+               <span  >{<br/>}</span>
+
+               {/* ////////////// */}
+              <span>{check2}
+              </span> 
+              {/* ////////////// */}
+
+              {/* //NODE-JS// */}
+              <span className='spanRight'>{infoNodeJS}</span>
+               {/* ////////////// */}
+
+
+               {/* ////////////// */}
+              <span className='spanLeft'>{check2}
+              </span> 
+              {/* ////////////// */}
+
+              {/* //JWT// */}
+              <span className='spanRight'>{infoJWT}</span>
+               {/* ////////////// */}
+
               </h5>
               </div>
             

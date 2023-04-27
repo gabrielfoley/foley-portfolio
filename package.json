@@ -15,22 +15,18 @@
 		"react": "^17.0.2",
 		"react-dom": "^17.0.2",
 		"react-icons": "^4.3.1",
-		"react-scripts": "5.0.0",
+		"react-scripts": "^4.0.3",
 		"standard": "^17.0.0",
-		"swiper": "^8.0.6",
-		"web-vitals": "^2.1.4"
+		"swiper": "^9.2.4",
+		"util": "^0.12.5",
+		"web-vitals": "^2.1.4",
+		"webpack-node-externals": "^3.0.0"
 	},
 	"scripts": {
 		"start": "PORT=3005 react-scripts start",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject"
-	},
-	"eslintConfig": {
-		"extends": [
-			"react-app",
-			"react-app/jest"
-		]
 	},
 	"browserslist": {
 		"production": [
@@ -43,5 +39,23 @@
 			"last 1 firefox version",
 			"last 1 safari version"
 		]
+	},
+	"devDependencies": {
+		"@abhijithvijayan/eslint-config": "^2.6.3",
+		"@abhijithvijayan/eslint-config-airbnb": "^1.0.2",
+		"@babel/core": "^7.21.4",
+		"@babel/eslint-parser": "^7.21.3",
+		"@typescript-eslint/eslint-plugin": "^4.33.0",
+		"@typescript-eslint/parser": "^4.33.0",
+		"eslint": "^7.32.0",
+		"eslint-config-prettier": "^6.15.0",
+		"eslint-plugin-import": "^2.27.5",
+		"eslint-plugin-jsx-a11y": "^6.7.1",
+		"eslint-plugin-node": "^11.1.0",
+		"eslint-plugin-prettier": "^3.4.1",
+		"eslint-plugin-react": "^7.32.2",
+		"eslint-plugin-react-hooks": "^4.6.0",
+		"prettier": "^2.8.8",
+		"typescript": "^4.9.5"
 	}
 }
