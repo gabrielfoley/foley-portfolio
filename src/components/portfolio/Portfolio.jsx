@@ -33,6 +33,7 @@ const data = [
     infoMaterialUI: 'Material UI',
     infoBootstrap: "Bootstrap",
     infoCSS1: 'CSS',
+    infoAxios: 'Axios',
 
   },
   {
@@ -152,6 +153,7 @@ const Portfolio = () => {
             infoRedux,
             infoNodeJS,
             infoJWT,
+            infoAxios,
           }) => {
             return (
               <article key={id} className='portfolio__item'>
@@ -291,12 +293,12 @@ const Portfolio = () => {
                <span  >{<br/>}</span>
 
                {/* ////////////// */}
-              <span>{check2}
+              <span>{check1}{check2}
               </span> 
               {/* ////////////// */}
 
               {/* //NODE-JS// */}
-              <span className='spanRight'>{infoNodeJS}</span>
+              <span className='spanRight'>{infoNodeJS}{infoAxios}</span>
                {/* ////////////// */}
 
 
